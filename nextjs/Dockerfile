@@ -9,6 +9,8 @@ RUN npm install
 
 COPY . ./
 
+ARG NEXT_PUBLIC_PAYMENT_POINTER
+ARG NEXT_PUBLIC_RECEIPT_VERIFIER_URI
 RUN npm run build && \
     npm run export
 
