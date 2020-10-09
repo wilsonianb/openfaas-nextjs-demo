@@ -1,0 +1,1 @@
+# OpenFaaS Next.js demo
