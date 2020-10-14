@@ -10,7 +10,7 @@ RUN npm install
 
 COPY . ./
 
-ARG NEXT_PUBLIC_PAYMENT_POINTER=\$pay.test.codiusfaas.net/wilsonianbcoil-nextjs
+ARG NEXT_PUBLIC_PAYMENT_POINTER=\$pay.test.codiusfaas.net/wilsonianb-nextjs
 ARG NEXT_PUBLIC_RECEIPT_VERIFIER_URI=https://pay.test.codiusfaas.net/receipts
 RUN npm run build && \
     npm run export
