@@ -20,7 +20,7 @@ export const WebMonetizationStatus = () => {
         if (res.ok) {
           const value = parseInt(await res.text())
           const total = value + totalReceived
-          setTotalReceived(value)
+          setTotalReceived(total)
           setStatus(
             <div>
               <p>total received: {totalReceived}</p>
