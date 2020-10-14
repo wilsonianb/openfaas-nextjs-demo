@@ -1,4 +1,5 @@
 FROM openfaas/of-watchdog:0.8.1 AS watchdog
+
 FROM node:lts AS build
 
 WORKDIR /home/app
@@ -9,8 +10,8 @@ RUN npm install
 
 COPY . ./
 
-ARG NEXT_PUBLIC_PAYMENT_POINTER
-ARG NEXT_PUBLIC_RECEIPT_VERIFIER_URI
+ARG NEXT_PUBLIC_PAYMENT_POINTER=\$pay.test.codiusfaas.net/wilsonianbcoil-nextjs
+ARG NEXT_PUBLIC_RECEIPT_VERIFIER_URI=https://pay.test.codiusfaas.net/receipts
 RUN npm run build && \
     npm run export
 
