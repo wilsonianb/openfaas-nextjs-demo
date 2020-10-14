@@ -12,3 +12,5 @@ functions:
       NEXT_PUBLIC_RECEIPT_VERIFIER_URI: https://pay.test.codiusfaas.net/receipts
     environment:
       write_debug: true
+    annotations:
+      interledger.org/payment-pointer: https://ilp.gatehub.net/231488887
